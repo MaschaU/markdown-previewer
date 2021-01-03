@@ -9,11 +9,14 @@ export default class App extends React.Component {
       <div className="App">
         <div className="container">
           <h1>Markdown Previewer</h1>
-          <div className="text-area">
+          <div className="markdown-input">
             <h2>Markdown Input</h2>
           </div>
           <div className="preview">
             <h2>Preview</h2>
+          </div>
+          <div className="mark-input">
+            <textarea className="input"></textarea>
           </div>
         </div>
 
