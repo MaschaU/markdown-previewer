@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+let marked = require("marked");
+
 
 
 export default class App extends React.Component {
@@ -27,8 +29,7 @@ export default class App extends React.Component {
               </textarea>
             </div>
           </div>
-          <div className="preview">
-            <h2>Preview</h2>
+          <div className="preview" dangerouslySetInnerHTML={{ __html: marked(this.state.markdown) }}>
           </div>
           
         </div>
