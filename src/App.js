@@ -72,9 +72,11 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <div className="container">
-          <h1>Markdown Previewer</h1>
+          <div id="header">
+            <h1>Markdown Previewer</h1>
+          </div>
           <div className="markdown-input">
-            <h2>Markdown Input</h2>
+            <h2 id="h2-input">Markdown Input:</h2>
             <div className="mark-input">
               <textarea id="editor" value={this.state.markdown} onChange={(e)=>{this.updateMarkdown(e.target.value);}}>
                 {console.log(this.state.markdown)}
