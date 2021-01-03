@@ -3,6 +3,7 @@ body {
   background-color: #a0aabf;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto Mono', monospace;
 }
 
 #header {
@@ -37,7 +38,7 @@ h1 {
 }
 
 #preview {
-  height: 100vh;
+  height: 115vh;
   text-align: left;
 }
 
@@ -48,5 +49,17 @@ li {
 img {
   height: 150px;
   width: 250px;
+  margin-top: 10px;
 }
+
+button {
+  margin-bottom: 30px;
+  height: 35px;
+  width: 200px;
+  background-color: #373d49;
+  color: #35d7bb;
+  border-radius: 6px;
+  font-size: 1.3rem;
+}
+
 
