@@ -50,19 +50,23 @@ Wild Header | Crazy Header | Another Header?
 1. And last but not least, let's not forget embedded images:
 ![Cute Overload](https://ahead4-thegreatprojects.s3.eu-west-2.amazonaws.com/image-cache/6/5/3/a/6/653a650a7f47332c8833716c76a7e0c36a291f23-international-sloth-day-2018-sloths-need-our-help-so-lets-get-moving-6879.jpeg)
 `
-
-
-
 export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       markdown: placeholder,
     };
+    this.clearTextArea = this.clearTextArea.bind(this);
   }
 
   updateMarkdown(markdown) {
     this.setState({markdown});
+  }
+
+  clearTextArea() {
+    this.setState({
+      markdown: ""
+    });
   }
   render () {
     return (
@@ -78,6 +82,9 @@ export default class App extends React.Component {
             </div>
           </div>
           <div id="preview" dangerouslySetInnerHTML={{ __html: marked(this.state.markdown) }}>
+          </div>
+          <div>
+            <button onClick={this.clearTextArea}>Clear</button>
           </div>
           
         </div>
