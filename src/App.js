@@ -4,6 +4,16 @@ import './App.css';
 
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      markdown: "",
+    };
+  }
+
+  updateMarkdown(markdown) {
+    this.setState({markdown});
+  }
   render () {
     return (
       <div className="App">
@@ -12,7 +22,9 @@ export default class App extends React.Component {
           <div className="markdown-input">
             <h2>Markdown Input</h2>
             <div className="mark-input">
-              <textarea className="input"></textarea>
+              <textarea className="input" value={this.state.markdown} onChange={(e)=>{this.updateMarkdown(e.target.value);}}>
+                {console.log(this.state.markdown)}
+              </textarea>
             </div>
           </div>
           <div className="preview">
